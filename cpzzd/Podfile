@@ -1,0 +1,21 @@
+#use_frameworks!
+platform :ios, "7.0"
+
+
+target 'cpzzd' do
+ 	pod 'MJRefresh'
+	pod 'Masonry'
+	pod 'SDWebImage'
+	pod 'ReactiveCocoa'
+	pod 'YYModel'
+	pod 'ReactiveViewModel'
+	pod 'AFNetworking'
+	pod 'SVProgressHUD', '~> 2.0'
+	pod 'CocoaLumberjack'
+	pod 'CRToast', '~> 0.0.7'
+	pod 'KSToastView', '~> 0.5.7'
+	pod 'CYLTableViewPlaceHolder'
+    pod 'Realm'
+end
+
+

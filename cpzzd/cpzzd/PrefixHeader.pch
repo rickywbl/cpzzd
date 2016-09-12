@@ -1,0 +1,70 @@
+//
+//  PrefixHeader.pch
+//  cpzzd
+//
+//  Created by 王保霖 on 16/8/31.
+//  Copyright © 2016年 Ricky. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <Masonry.h>
+#import <SVProgressHUD.h>
+#import <YYModel.h>
+#import <ReactiveCocoa.h>
+#import <CYLTableViewPlaceHolder.h>
+#import <Realm.h>
+#import <AFNetworking.h>
+#import <MJRefresh.h>
+#import <UIButton+WebCache.h>
+#import <UIImageView+WebCache.h>
+
+
+
+#import "CPRootViewController.h"
+#import "CPTabBarController.h"
+#import "CPFatherViewController.h"
+#import "CPNavigationController.h"
+#import "CPLoginViewController.h"
+#import "CPRootViewController.h"
+
+
+#import "UIColor+flat.h"
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
+#import "CPMessageResponse.h"
+#import "CPMessage.h"
+#import "CPNetManage.h"
+#import "CPTools.h"
+#import "CPConfig.h"
+#import "SFHFKeychainUtils.h"
+
+#pragma mark --- NetRequest
+
+#define CPNetRequest_Header(a)  [NSString stringWithFormat:@"http://cpzzd.sanlianyang.com:80/%@",a]
+#define CPNetHeader  @"http://cpzzd.sanlianyang.com:80";
+
+#define Login_Request(u,p,k) [NSString stringWithFormat:@"account/login?name=%@&password=%@&popedom=%@",u,p,k]
+#define LoginOut_Request(t) [NSString stringWithFormat:@"/account/logout?token=%@",t]
+#define CheckToken_Request(t) [NSString stringWithFormat:@"/account/TokenValidate?token=%@",t]
+#define Comment_Request(t,r,c) [NSString stringWithFormat:@"comment/submit?token=%@&recId=%@&content=%@",t,r,c]
+#define ChangePassword_Request(t,r,c) [NSString stringWithFormat:@"/account/ChangePassword?token=%@&newpw=%@&oldpw=%@",t,r,c]
+
+//account/login?name=hance&password=hancehance&popedom=cjzk
+
+
+#define CPColor(a) [UIColor colorWithHexCode:a]
+#define CPImage(a)  [UIImage imageNamed:a]
+#define CPMainBGCOLOR CPColor(@"E6E6E6")
+#define CPScreen_Width [UIScreen mainScreen].bounds.size.width
+#define CPScreen_Height [UIScreen mainScreen].bounds.size.height
+
+#define CPKeyWindowController  [UIApplication sharedApplication].keyWindow.rootViewController
+
+#define UMKEY  @"57d6157be0f55a89dc0028d5"
+#define UMSecret  @"gq7nlacandpe0aequuju6a4glpvafk6a"
+
+#endif /* PrefixHeader_pch */
